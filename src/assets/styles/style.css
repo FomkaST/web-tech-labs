@@ -16,6 +16,11 @@
     }
 }
 
+.technologies {
+  position: relative;
+  z-index: 2;
+}
+
 /* COMMON */
 
 body {

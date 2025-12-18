@@ -1,0 +1,273 @@
+@media (max-width: 1439px) {
+  /* header */
+
+  .header {
+    margin: 0 auto;
+
+    .container {
+      min-height: 90px;
+    }
+  }
+
+  .nav, .mob {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .header--mobile {
+    .container {
+      min-height: 100vh;
+      padding-top: 140px;
+      flex-direction: column;
+      margin-top: 0;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin-bottom: 36px;
+    }
+
+    ul {
+      flex-direction: column;
+      align-items: center;
+      padding: 0;
+      margin-bottom: 52px;
+    }
+
+    li {
+      padding: 16px 0;
+      font-size: 36px;
+    }
+
+    .mob {
+      display: flex;
+      align-items: center;
+    }
+
+    .contacts {
+      margin-bottom: 130px;
+    }
+
+    .nav, .mob {
+      display: flex;
+    }
+  }
+
+  .mob span:first-of-type {
+    padding-right: 32px;
+  }
+
+  .header--mobile .hidden {
+    display: inline-block;
+  }
+
+  /* about */
+
+  .about {
+    .container {
+      max-height: 650px;
+    }
+
+    .title {
+      min-width: 380px;
+
+      h2 {
+        width: 70%;
+      }
+    }
+
+    .left-side {
+      z-index: 2;
+    }
+  }
+
+  .title {
+    h2 {
+      font-size: 28px;
+    }
+
+    p {
+      width: 70%;
+    }
+  }
+
+  .contact-form {
+    width: 70%;
+
+    h3 {
+      font-size: 16px;
+    }
+  }
+
+  .form {
+    flex-direction: column;
+    gap: 32px;
+    align-items: start;
+  }
+
+  /* technologies */
+
+  .technologies {
+    .container {
+      justify-content: space-between;
+      gap: 100px;
+    }
+
+    p {
+      min-width: 350px;
+    }
+  }
+
+  .links ul {
+    margin-top: 200px;
+    min-width: 250px;
+  }
+
+  /* FOOTER */
+
+  .footer {
+    margin: 0 auto;
+    padding-bottom: 0;
+
+    .container {
+      padding: 0 50px;
+    }
+  }
+
+  .company-info {
+    gap: 50px;
+    align-self: auto;
+  }
+
+  .number span, .post span, .address span, .request span {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 767px) {
+  /* header */
+
+  .mail {
+    display: none;
+  }
+
+  .header--mobile {
+    h1 {
+      font-size: 20px;
+    }
+
+    li {
+      font-size: 24px;
+      padding: 10px 0;
+    }
+
+    .mail {
+      display: flex;
+      justify-content: center;
+    }
+
+    .contacts {
+      flex-direction: column;
+    }
+  }
+
+  /* about */
+
+  .about {
+    .container {
+      flex-direction: column;
+      min-height: 1100px;
+    }
+
+    .title {
+      background-color: #F2F4F7;
+      margin-left: -20px;
+      padding-left: 20px;
+    }
+  }
+
+  .left-side {
+    display: flex;
+    flex-direction: column;
+    gap: 350px;
+
+    .contact-form {
+      align-items: flex-end;
+    }
+  }
+
+  .contact-form {
+    position: relative;
+    z-index: 5;
+    width: 100%;
+  }
+
+  .main-images {
+    top: 100px;
+    left: 20%;
+
+    img {
+      width: 60%;
+    }
+
+    .left-col {
+      position: relative;
+      top: 300px;
+      animation: moveOne--mobile 8s infinite linear;
+    }
+
+    .right-col {
+      position: relative;
+      top: -400px;
+      margin-left: -120px;
+    }
+  }
+
+  @keyframes moveOne--mobile {
+    0% {
+      transform: translate(0, 0);
+    }
+
+    100% {
+      transform: translate(0, -50%);
+    }
+  }
+
+  /* technologies */
+
+  .technologies {
+    .container {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 30px;
+    }
+
+    p {
+      min-width: auto;
+    }
+
+    ul {
+      margin-top: 0;
+      padding-left: 0;
+    }
+
+    li {
+      font-size: 20px;
+    }
+  }
+
+  /* footer */
+
+  .footer .company-info {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-left: 60px;
+  }
+
+  .number, .post, .address, .request {
+    min-width: 190px;
+  }
+}

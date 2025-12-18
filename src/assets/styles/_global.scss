@@ -1,0 +1,43 @@
+html {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+
+  &:before, &:after {
+    box-sizing: border-box;
+  }
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+
+  &:visited, &:hover {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  &:focus, &:active {
+    outline: none;
+  }
+}
+
+button, input[type="submit"] {
+  display: inline-block;
+  box-shadow: none;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: none;
+}

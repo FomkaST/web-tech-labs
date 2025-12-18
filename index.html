@@ -12,23 +12,27 @@
 <body>
 <header class="header">
     <div class="container">
+        <button type="button" class="menu-icon">
+            <div class="menu-icon__line"></div>
+        </button>
         <h1 class="logo">IT WEBSITE</h1>
         <nav class="nav">
             <ul>
-                <li>Services</li>
-                <li>Media</li>
-                <li>Cases</li>
-                <li>FAQ</li>
-                <li>Contacts</li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Media</a></li>
+                <li><a href="#">Cases</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Contacts</a></li>
             </ul>
         </nav>
         <div class="contacts">
-            <div class="contact">
+            <div class="mob">
                 <img src="src/assets/img/mobile.svg">
                 <span>+7 (111) 111 11 11</span>
+                <img class="hidden" src="src/assets/img/mobile.svg">
                 <span>+7 (111) 111 11 11</span>
             </div>
-            <div class="contact">
+            <div class="mail">
                 <img src="src/assets/img/mail.svg">
                 <span>itcompany@mail.com</span>
             </div>
@@ -47,264 +51,277 @@
                 <div class="contact-form">
                     <h3>Leave your contacts and we will call you back within 30 minutes</h3>
                     <form class="form">
-                    <div class="form-label">
-                        <label>
-                        Phone number
-                        <input type="phone" name="phone" placeholder="+7 (111) 111 11 11">
-                        </label>
-                    </div>
-                    <div class="form-label">
-                        <label>
-                        Full name
-                        <input type="text" name="name" placeholder="Your full name">
-                        </label>
-                    </div>
-                    <button type="submit" class="btn">
-                        Get<br>consultation
-                    </button>
+                        <div class="form-label">
+                            <label>
+                            Phone number
+                            <input type="phone" name="phone" placeholder="+7 (111) 111 11 11">
+                            </label>
+                        </div>
+                        <div class="form-label">
+                            <label>
+                            Full name
+                            <input type="text" name="name" placeholder="Your full name">
+                            </label>
+                        </div>
+                        <button type="submit" class="btn">
+                            Get<br>consultation
+                        </button>
                     </form>
                 </div>
             </div>
             <div class="right-side">
                 <div class="main-images">
-                    <img src="src/assets/img/image1.jpg">
-                    <img src="src/assets/img/image2.jpg">
-                    <img src="src/assets/img/image3.jpg">
-                    <img src="src/assets/img/image4.jpg">
-                    <img src="src/assets/img/image5.jpg">
-                    <img src="src/assets/img/image6.jpg">
+                    <div class="left-col">
+                        <img class="left-img" src="src/assets/img/column-left.webp">
+                        <img class="left-img" src="src/assets/img/column-left.webp">
+                    </div>
+                    <div class="right-col">
+                        <img class="right-img" src="src/assets/img/column-right.webp">
+                        <img class="right-img" src="src/assets/img/column-right.webp">
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    <hr>
     
-    <section class="technologies">
-        <div class="title">
-            <h2>Full development cycle</h2>
-            <p>We use proven technologies</p>
-            <h3>Web</h3>
-            <p>PHP / Javascript / Node.JS / Web Socket / Socket.io / Vue.js/ Nuxt / MySQL / Laravel / GO lang / django / Python</p>
-            <h3>Mobile</h3>
-            <p>Swift / Kotlin / Alamofire / Firebase / CoreData / Room / Realm / Coroutine / RxJava / RxSwift / Unit Test / Navigation</p>
-        </div>
-        <div class="links">
-            <ul>
-                <li>iOS development</li>
-                <li>Android development</li>
-                <li>Web development</li>
-                <li>UI/UX design</li>
-                <li>Testing</li>
-                <li>Launch</li>
-                <li>IT consulting</li>
-            </ul>
-        </div>
-    </section>
-    <hr>
-
-    <section class="developed-projects">
-        <h2 class="title">Developed more than 100 projects in 15 industries</h2>
-        <div class="industries">
-            <div class="col">
-                <ul>
-                    <li>
-                        <img src="src/assets/img/little-heart.svg">
-                        <span>Social media</span>
-                    </li>
-                    <li>
-                        <img src="src/assets/img/ball.svg">
-                        <span>Fitness and sport</span>
-                    </li>
-                    <li>
-                        <img src="src/assets/img/bank.svg">
-                        <span>Bank</span>
-                    </li>
-                    <li>
-                        <img src="src/assets/img/human.svg">
-                        <span>Construction</span>
-                    </li>
-                    <li>
-                        <img src="src/assets/img/joystick.svg">
-                        <span>Game projects</span>
-                    </li>
-                </ul>
-            </div>
-            <div class="col">
-                <ul>
-                    <li>
-                        <img src="src/assets/img/hat.svg">
-                        <span>Education</span>
-                    </li>
-                    <li>
-                        <img src="src/assets/img/car.svg">
-                        <span>Auto, transport</span>
-                    </li>
-                    <li>
-                        <img src="src/assets/img/heart.svg">
-                        <span>Medicine, health</span>
-                    </li>
-                    <li>
-                        <img src="src/assets/img/bowl.svg">
-                        <span>Restaurants, food delivery</span>
-                    </li>
-                    <li>
-                        <img src="src/assets/img/market.svg">
-                        <span>Marketplaces</span>
-                    </li>
-                </ul>
-            </div>
-            <div class="col">
-                <ul>
-                    <li>
-                        <img src="src/assets/img/target.svg">
-                        <span>AR technology</span>
-                    </li>
-                    <li>
-                        <img src="src/assets/img/videotape.svg">
-                        <span>TV series</span>
-                    </li>
-                    <li>
-                        <img src="src/assets/img/briefcase.svg">
-                        <span>Startups</span>
-                    </li>
-                    <li>
-                        <img src="src/assets/img/magic-wand.svg">
-                        <span>Religion</span>
-                    </li>
-                    <li>
-                        <img src="src/assets/img/play.svg">
-                        <span>Online cources</span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-    <hr>
-
-    <section class="main-projects">
-        <div class="title">
-            <h2>Projects we are proud of</h2>
-            <p>Our software development company is truly proud of the wonderful clients we have worked with. We enjoy a long-term partnership</p>
-        </div>
-        <div class="projects">
-            <ul>
-                <li>I-teka</li>
-                <li>Dauletten</li>
-                <li>Guru Bosch</li>
-                <li>Santo</li>
-                <li>Home Credit Bank</li>
-                <li>BI Partners</li>
-                <li>Europharma</li>
-                <li><button type="button">View 100 more projects</button></li>
-            </ul>
-        </div>
-        <div class="about-project">
+    <section class="technologies general-group general-group--white">
+        <div class="container general-group--white">
             <div class="title">
-                <h2>I-teka</h2>
-                <p>The application is designed to search for drugs by availability in pharmacies in cities. During quarantine, the application helped many people, which gives more value.</p>
+                <h2>Full development cycle</h2>
+                <p>We use proven technologies</p>
+                <h3>Web</h3>
+                <p>PHP <span>/</span> Javascript <span>/</span> Node.JS <span>/</span> Web Socket <span>/</span> Socket.io <span>/</span> Vue.js<span>/</span> 
+                    <br> Nuxt <span>/</span> MySQL <span>/</span> Laravel <span>/</span> GO lang <span>/</span> django <span>/</span> Python</p>
+                <h3>Mobile</h3>
+                <p>Swift <span>/</span> Kotlin <span>/</span> Alamofire <span>/</span> Firebase <span>/</span> CoreData <span>/</span> Room <span>/</span> Realm <span>/</span> 
+                    <br> Coroutine <span>/</span> RxJava <span>/</span> RxSwift <span>/</span> Unit Test <span>/</span> Navigation</p>
             </div>
-            <p>Business analysis / iOS / Android / QA / UI/UX Design</p>
-            <div class="country">
-                <img src="src/assets/img/place.svg">
-                <span>Kazakhstan</span>
+            <div class="links">
+                <ul>
+                    <li><a href="#">iOS development</a><img src="./src/assets/img/arrow.svg"></li>
+                    <li><a href="#">Android development</a><img src="./src/assets/img/arrow.svg"></li>
+                    <li><a href="#">Web development</a><img src="./src/assets/img/arrow.svg"></li>
+                    <li><a href="#">UI/UX design</a><img src="./src/assets/img/arrow.svg"></li>
+                    <li><a href="#">Testing</a><img src="./src/assets/img/arrow.svg"></li>
+                    <li><a href="#">Launch</a><img src="./src/assets/img/arrow.svg"></li>
+                    <li><a href="#">IT consulting</a><img src="./src/assets/img/arrow.svg"></li>
+                </ul>
             </div>
-            <div class="industry">
-                <img src="src/assets/img/briefcase.svg">
-                <span>Medicine</span>
+        </div>
+    </section>
+
+    <section class="developed-projects general-group">
+        <div class="container">
+            <h2 class="title">Developed more than 100 projects in 15 industries</h2>
+            <div class="industries">
+                <div class="col">
+                    <ul>
+                        <li>
+                            <img src="src/assets/img/little-heart.svg">
+                            <span>Social media</span>
+                        </li>
+                        <li>
+                            <img src="src/assets/img/ball.svg">
+                            <span>Fitness and sport</span>
+                        </li>
+                        <li>
+                            <img src="src/assets/img/bank.svg">
+                            <span>Bank</span>
+                        </li>
+                        <li>
+                            <img src="src/assets/img/human.svg">
+                            <span>Construction</span>
+                        </li>
+                        <li>
+                            <img src="src/assets/img/joystick.svg">
+                            <span>Game projects</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <ul>
+                        <li>
+                            <img src="src/assets/img/hat.svg">
+                            <span>Education</span>
+                        </li>
+                        <li>
+                            <img src="src/assets/img/car.svg">
+                            <span>Auto, transport</span>
+                        </li>
+                        <li>
+                            <img src="src/assets/img/heart.svg">
+                            <span>Medicine, health</span>
+                        </li>
+                        <li>
+                            <img src="src/assets/img/bowl.svg">
+                            <span>Restaurants, food delivery</span>
+                        </li>
+                        <li>
+                            <img src="src/assets/img/market.svg">
+                            <span>Marketplaces</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <ul>
+                        <li>
+                            <img src="src/assets/img/target.svg">
+                            <span>AR technology</span>
+                        </li>
+                        <li>
+                            <img src="src/assets/img/videotape.svg">
+                            <span>TV series</span>
+                        </li>
+                        <li>
+                            <img src="src/assets/img/briefcase.svg">
+                            <span>Startups</span>
+                        </li>
+                        <li>
+                            <img src="src/assets/img/magic-wand.svg">
+                            <span>Religion</span>
+                        </li>
+                        <li>
+                            <img src="src/assets/img/play.svg">
+                            <span>Online cources</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="main-projects general-group">
+        <div class="container">
+            <div class="title">
+                <h2>Projects we are proud of</h2>
+                <p>Our software development company is truly proud of the wonderful clients we have worked with. We enjoy a long-term partnership</p>
+            </div>
+            <div class="projects">
+                <ul>
+                    <li>I-teka</li>
+                    <li>Dauletten</li>
+                    <li>Guru Bosch</li>
+                    <li>Santo</li>
+                    <li>Home Credit Bank</li>
+                    <li>BI Partners</li>
+                    <li>Europharma</li>
+                    <li><button type="button">View 100 more projects</button></li>
+                </ul>
+            </div>
+            <div class="about-project">
+                <div class="title">
+                    <h2>I-teka</h2>
+                    <p>The application is designed to search for drugs by availability in pharmacies in cities. During quarantine, the application helped many people, which gives more value.</p>
+                </div>
+                <p>Business analysis / iOS / Android / QA / UI/UX Design</p>
+                <div class="country">
+                    <img src="src/assets/img/place.svg">
+                    <span>Kazakhstan</span>
+                </div>
+                <div class="industry">
+                    <img src="src/assets/img/briefcase.svg">
+                    <span>Medicine</span>
+                </div>
+                <div class="statistics">
+                    <p>400% User Growth</p>
+                    <p>+ 200 000 Active Users</p>
+                </div>
+                <div class="download-links">
+                    <img src="src/assets/img/app-store.svg">
+                    <img src="src/assets/img/google-play.svg">
+                </div>
+                <div class="image">
+                    <img src="./src/assets/img/iteka.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="discuss-form general-group">
+        <div class="container">
+            <div class="title">
+                <h2>Let's discuss Your project</h2>
+                <p>Let's figure out how to create an effective application, its cost and terms of its development</p>
+            </div>
+            <div class="contact-form">
+                <form>
+                    <label for="phone">Phone number</label>
+                    <input type="phone" id="phone" placeholder="+7 (111) 111-11-11">
+
+                    <label for="name">Full name</label>
+                    <input type="text" id="name" placeholder="Your full name">
+
+                    <input type="submit" value="Discuss the project">
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="development-stages general-group">
+        <div class="container">
+            <h3 class="title">Application Development Stages</h3>
+            <div class="cards">
+                <div class="card">
+                    <div class="name-card">
+                        <img src="src/assets/img/planing.svg">
+                        <p>Analysis</p>
+                    </div>
+                    <p>We write technical specifications for development, taking into account the business processes and technologies of the customer and the needs of users.</p>
+                </div>
+                <div class="card">
+                    <div class="name-card">
+                        <img src="src/assets/img/design.svg">
+                        <p>Design</p>
+                    </div>
+                    <p>We adapt the customer's corporate identity to the platform guidelines. We draw convenient and understandable interfaces.</p>
+                </div>
+                <div class="card">
+                    <div class="name-card">
+                        <img src="src/assets/img/monitor.svg">
+                        <p>Development</p>
+                    </div>
+                    <p>We create an extensible architecture, write clean and stable code. We integrate with customer technologies.</p>
+                </div>
+                <div class="card">
+                    <div class="name-card">
+                        <img src="src/assets/img/security.svg">
+                        <p>Testing</p>
+                    </div>
+                    <p>We carry out functional testing and do bug fixes. We adapt the application to different phone resolutions</p>
+                </div>
+                <div class="card">
+                    <div class="name-card">
+                        <img src="src/assets/img/rocket.svg">
+                        <p>Launching</p>
+                    </div>
+                    <p>We design the application page and publish it in the App Store and Google Play stores.</p>
+                </div>
+                <div class="card">
+                    <div class="name-card">
+                        <img src="src/assets/img/app.svg">
+                        <p>Support</p>
+                    </div>
+                    <p>We monitor the stability of the application, update it for new devices and versions of iOS and Android.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="team general-group">
+        <div class="container">
+            <div class="title">
+                <h2>Our team</h2>
+                <p>Thousand is a full-cycle digital production company with its own product analytics, design, web and mobile development.</p>
             </div>
             <div class="statistics">
-                <p>400% User Growth</p>
-                <p>+ 200 000 Active Users</p>
+                <span>28 team members</span>
+                <span>+100 projects</span>
+                <span>7 years in IT sphere</span>
+                <p>All the necessary specialists - from a designer to a tester - are on our staff. We hire the best specialists in the market. It's expensive but worth it</p>
             </div>
-            <div class="download-links">
-                <img src="src/assets/img/app-store.svg">
-                <img src="src/assets/img/google-play.svg">
+            <div class="video">
+                <img src="src/assets/img/video.svg">
             </div>
-        </div>
-    </section>
-    <hr>
-
-    <section class="discuss-form">
-        <div class="title">
-            <h2>Let's discuss Your project</h2>
-            <p>Let's figure out how to create an effective application, its cost and terms of its development</p>
-        </div>
-        <div class="contact-form">
-            <form>
-                <label for="phone">Phone number</label>
-                <input type="phone" id="phone" placeholder="+7 (111) 111-11-11">
-
-                <label for="name">Full name</label>
-                <input type="text" id="name" placeholder="Your full name">
-
-                <input type="submit" value="Discuss the project">
-            </form>
-        </div>
-    </section>
-    <hr>
-
-    <section class="development-stages">
-        <h3 class="title">Application Development Stages</h3>
-        <div class="cards">
-            <div class="card">
-                <div class="name-card">
-                    <img src="src/assets/img/planing.svg">
-                    <p>Analysis</p>
-                </div>
-                <p>We write technical specifications for development, taking into account the business processes and technologies of the customer and the needs of users.</p>
-            </div>
-            <div class="card">
-                <div class="name-card">
-                    <img src="src/assets/img/design.svg">
-                    <p>Design</p>
-                </div>
-                <p>We adapt the customer's corporate identity to the platform guidelines. We draw convenient and understandable interfaces.</p>
-            </div>
-            <div class="card">
-                <div class="name-card">
-                    <img src="src/assets/img/monitor.svg">
-                    <p>Development</p>
-                </div>
-                <p>We create an extensible architecture, write clean and stable code. We integrate with customer technologies.</p>
-            </div>
-            <div class="card">
-                <div class="name-card">
-                    <img src="src/assets/img/security.svg">
-                    <p>Testing</p>
-                </div>
-                <p>We carry out functional testing and do bug fixes. We adapt the application to different phone resolutions</p>
-            </div>
-            <div class="card">
-                <div class="name-card">
-                    <img src="src/assets/img/rocket.svg">
-                    <p>Launching</p>
-                </div>
-                <p>We design the application page and publish it in the App Store and Google Play stores.</p>
-            </div>
-            <div class="card">
-                <div class="name-card">
-                    <img src="src/assets/img/app.svg">
-                    <p>Support</p>
-                </div>
-                <p>We monitor the stability of the application, update it for new devices and versions of iOS and Android.</p>
-            </div>
-        </div>
-    </section>
-    <hr>
-
-    <section class="team">
-        <div class="title">
-            <h2>Our team</h2>
-            <p>Thousand is a full-cycle digital production company with its own product analytics, design, web and mobile development.</p>
-        </div>
-        <div class="statistics">
-            <span>28 team members</span>
-            <span>+100 projects</span>
-            <span>7 years in IT sphere</span>
-            <p>All the necessary specialists - from a designer to a tester - are on our staff. We hire the best specialists in the market. It's expensive but worth it</p>
-        </div>
-        <div class="video">
-            <img src="src/assets/img/video.svg">
         </div>
     </section>
     <hr>
@@ -356,9 +373,9 @@
     <hr>
 
 </main>
-<footer class="footer general-group">
+<footer class="footer general-group general-group--white">
     <div class="container">
-        <h2 class="logo">IT WEBSITE</h2>
+        <h1 class="logo">IT WEBSITE</h1>
         <div class="company-info">
             <div class="number">
                 <div class="main-data">
@@ -395,5 +412,6 @@
         </div>
     </div>
 </footer>
+<script src="./src/index.js"></script>
 </body>
 </html>

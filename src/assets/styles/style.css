@@ -21,7 +21,7 @@
   z-index: 2;
 }
 
-/* COMMON */
+/* general */
 
 body {
     margin: 0;
@@ -117,7 +117,7 @@ body {
     max-width: 220px;
 }
 
-/* HEADER */
+/* header */
 
 .header {
     position: fixed;
@@ -181,7 +181,7 @@ body {
     padding: 0 4px;
 }
 
-/* ABOUT */
+/* about */
 
 .about {
     position: relative;
@@ -239,7 +239,7 @@ body {
     border-radius: 24px;
 }
 
-/* FOOTER */
+/* footer */
 
 .footer .container {
     padding: 0px 20px;

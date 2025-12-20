@@ -1,6 +1,8 @@
 /* technologies */
 
 .technologies {
+  padding: 40px 0;
+  background: #FFF;
   position: relative;
   z-index: 2;
 
@@ -57,9 +59,4 @@
   a {
     position: relative;
   }
-}
-
-.developed-projects, .main-projects, .discuss-form, .development-stages {
-  position: relative;
-  z-index: 2;
 }

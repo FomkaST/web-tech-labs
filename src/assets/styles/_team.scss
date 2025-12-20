@@ -1,0 +1,35 @@
+/* team */
+
+.team {
+  padding: 40px 0;
+  background: #F2F4F7;
+
+  .container {
+    display: flex;
+    gap: 24px;
+  }
+
+  .statistics {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+
+    p {
+      color: #667085;
+      font-family: "SFProText";
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 20px;
+
+      span {
+        color: #101828;
+        font-family: "Inter";
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 144%;
+      }
+    }
+  }
+}

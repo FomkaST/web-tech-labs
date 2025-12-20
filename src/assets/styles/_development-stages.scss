@@ -1,0 +1,66 @@
+/* development-stages */
+
+.development-stages {
+  padding: 40px 0;
+  background: #FFF;
+  position: relative;
+  z-index: 2;
+  height: 810px;
+
+  .cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.cards .col {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.development-stages .card {
+  display: flex;
+  flex-direction: column;
+  max-width: 392px;
+  max-height: 192px;
+  border-radius: 12px;
+  background: #FFF;
+  box-shadow: 0px 2px 24px 0px rgba(0, 0, 0, 0.08), 0px 0px 2px 0px rgba(0, 0, 0, 0.08);
+  padding: 24px;
+  position: relative;
+}
+
+.card {
+  .name-card {
+    display: flex;
+    gap: 24px;
+    color: #101828;
+    font-family: "SFProText";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0.38px;
+  }
+
+  > p {
+    color: var(--gray-900, #101828);
+    font-family: "SFProText";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    margin-top: 12px;
+  }
+
+  &::after {
+    content: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' width='86' height='172' viewBox='0 0 86 172' fill='none'><path d='M43.125 172H85.8984V0H43.0078L0 29.799V67.2266L42.3047 38.3812H43.125V172Z' fill='#2D66EE' fill-opacity='0.04'/></svg>");
+    display: block;
+    width: 105px;
+    height: 150px;
+    position: absolute;
+    left: 0;
+  }
+}

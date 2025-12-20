@@ -126,7 +126,126 @@
     min-width: 250px;
   }
 
-  /* FOOTER */
+  /*  developed-projects */
+
+  .developed-projects {
+    .industries {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      .col:last-of-type ul {
+        margin-top: 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        position: relative;
+      }
+    }
+
+    .replace {
+      position: absolute;
+      left: 100%;
+    }
+
+    .replace--next {
+      top: 40%;
+    }
+  }
+
+  /* main-projects */
+
+  .projects {
+    li {
+      font-size: 14px;
+    }
+
+    flex-direction: column;
+
+    ul {
+      align-self: start;
+    }
+
+    a {
+      align-self: end;
+    }
+  }
+
+  .about-project .left-side {
+    margin-top: -40px;
+  }
+
+  /* discuss-form */
+
+  .discuss-form {
+    .container {
+      flex-direction: column;
+      min-height: 428px;
+      justify-content: unset;
+      gap: 10px;
+    }
+
+    .title {
+      width: 50%;
+    }
+
+    .contact-form {
+      margin-top: 0;
+    }
+  }
+
+  /* development-stages */
+
+  .development-stages {
+    min-height: 1300px;
+
+    .cards {
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    .col {
+      gap: 32px;
+      width: 100%;
+    }
+
+    .card {
+      max-width: none;
+    }
+  }
+
+  /* team */
+
+  .team {
+    .container {
+      flex-direction: column;
+      position: relative;
+    }
+
+    .left-side .statistics {
+      margin-top: 420px;
+      justify-content: unset;
+    }
+
+    .video {
+      position: absolute;
+      top: 20%;
+    }
+  }
+
+  /* booking-form */
+
+  .booking-form form .place {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+
+  /* faq */
+
+  .faq .questions {
+    flex-direction: column;
+  }
+
+  /* footer */
 
   .footer {
     margin: 0 auto;
@@ -256,6 +375,212 @@
 
     li {
       font-size: 20px;
+    }
+  }
+
+  /* developed-projects */
+
+  .developed-projects {
+    .title {
+      width: 100%;
+    }
+
+    li span {
+      font-size: 14px;
+    }
+  }
+
+  /* main-projects */
+
+  .main-projects {
+    .container {
+      position: relative;
+    }
+
+    .projects a {
+      position: absolute;
+      top: 92%;
+      left: 25%;
+    }
+
+    .download-links {
+      margin-bottom: 120px;
+    }
+
+    .about-project {
+      flex-direction: column-reverse;
+    }
+
+    .left-side {
+      gap: 0;
+
+      .title p {
+        margin-bottom: 0;
+      }
+
+      p {
+        font-size: 14px;
+      }
+    }
+
+    .right-side img, .title p {
+      width: 100%;
+    }
+
+    ul {
+      flex-wrap: wrap;
+    }
+
+    li {
+      margin-bottom: 12px;
+    }
+  }
+
+  /* discuss-form */
+
+  .discuss-form {
+    .container {
+      gap: 120px;
+    }
+
+    .title {
+      width: 120%;
+    }
+
+    .inputs {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .contact-form {
+      margin-bottom: 50px;
+    }
+
+    form {
+      input {
+        width: 100%;
+      }
+
+      a {
+        align-self: center;
+        width: 80%;
+      }
+    }
+  }
+
+  /* development-stages */
+
+  .development-stages {
+    min-height: 1450px;
+
+    .title {
+      width: 80%;
+    }
+  }
+
+  /* team */
+
+  .team {
+    .title p {
+      width: 100%;
+    }
+
+    .left-side {
+      gap: 0;
+    }
+
+    .video {
+      padding-top: 30px;
+
+      img {
+        width: 95%;
+      }
+    }
+
+    .left-side .statistics {
+      margin-top: 70%;
+    }
+
+    .statistics p {
+      font-size: 14px;
+
+      span {
+        font-size: 28px;
+      }
+    }
+  }
+
+  /* booking-form */
+
+  .booking-form {
+    .title {
+      width: 55%;
+    }
+
+    .container {
+      position: relative;
+      flex-direction: column;
+      gap: 100px;
+      max-height: 1000px;
+    }
+
+    .left-side {
+      gap: 250px;
+    }
+
+    .contact-form {
+      width: 50%;
+      margin-left: 8%;
+    }
+
+    form {
+      gap: 60px;
+
+      .place {
+        gap: 60px;
+      }
+    }
+
+    .contact-form a {
+      align-self: flex-start;
+    }
+  }
+
+  .image {
+    position: absolute;
+    top: 15%;
+    left: 30%;
+
+    img {
+      width: 160px;
+    }
+  }
+
+  /* faq */
+
+  .faq {
+    .left-side, .questions {
+      gap: 0;
+    }
+
+    .question {
+      justify-content: unset;
+      position: relative;
+    }
+
+    .questions .question-text {
+      width: 65%;
+
+      h3 {
+        font-size: 20px;
+        width: 80%;
+        padding-bottom: 40px;
+        margin-bottom: 0;
+      }
+
+      p {
+        font-size: 15px;
+      }
     }
   }
 

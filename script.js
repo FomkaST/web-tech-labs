@@ -14,68 +14,60 @@ function init() {
                 hasChildren: true,
                 items: [
                     {
-                        name: 'Ulgran1',
+                        name: 'Ulgran',
                         hasChildren: true,
                         items: [
-                            {
-                                name: 'SMT1',
-                                hasChildren: false,
-                                items: []
-                            },
-                            {
-                                name: 'SMT2',
-                                hasChildren: false,
-                                items: []
-                            }
+                            { name: 'Smth', hasChildren: false, items: [] },
+                            { name: 'Smth', hasChildren: false, items: [] }
                         ]
                     },
                     {
-                        name: 'Ulgran2',
+                        name: 'Vigro Mramor',
+                        hasChildren: false,
+                        items: []
+                    },
+                    {
+                        name: 'Handmade',
                         hasChildren: true,
                         items: [
-                            {
-                                name: 'SMT3',
-                                hasChildren: false,
-                                items: []
-                            },
-                            {
-                                name: 'SMT4',
-                                hasChildren: false,
-                                items: []
-                            }
+                            { name: 'Smth', hasChildren: false, items: [] },
+                            { name: 'Smth', hasChildren: false, items: [] }
                         ]
+                    },
+                    {
+                        name: 'Vigro Glass',
+                        hasChildren: false,
+                        items: []
                     }
                 ]
-            },{
+            },
+            {
                 name: 'Фильтры',
                 hasChildren: true,
                 items: [
                     {
-                        name: 'Ulgran3',
+                        name: 'Ulgran',
                         hasChildren: true,
                         items: [
-                            {
-                                name: 'SMT5',
-                                hasChildren: false,
-                                items: []
-                            },
-                            {
-                                name: 'SMT6',
-                                hasChildren: false,
-                                items: []
-                            }
+                            { name: 'Smth', hasChildren: false, items: [] },
+                            { name: 'Smth', hasChildren: false, items: [] }
                         ]
+                    },
+                    {
+                        name: 'Vigro Mramor',
+                        hasChildren: false,
+                        items: []
                     }
                 ]
             }
         ]
-    }
+    };
 
 
     const items = new ListItems(document.getElementById('list-items'), data)
 
 
-  /*  items.render()*/
+    items.render()
     items.init()
 
     /*console.log(items.renderTest(data));*/
@@ -103,11 +95,39 @@ function init() {
             //если hasChildren, то запускаем renderParent
             //если !hasChildren, то запускаем renderChildren
             //возвращает рендер родительского элемента
+            let html = '';
 
+            data.items.forEach(child => {
+                if (child.hasChildren) {
+                    html += this.renderParent(child);
+                } else {
+                    html += this.renderChildren(child);
+                }
+            });
+
+            return `
+                <div class="list-item list-item_open" data-parent>
+                    <div class="list-item__inner">
+                        <img class="list-item__arrow" src="img/chevron-down.png" alt="chevron-down" data-open>
+                        <img class="list-item__folder" src="img/folder.png" alt="folder">
+                        <span>${data.name}</span>
+                    </div>
+                    <div class="list-item__items">
+                        ${html}
+                    </div>
+                </div>
+            `;
         }
 
         this.renderChildren = function (data) {
-            //вовзращает рендер элемента без вложенности
+            return `
+                <div class="list-item child__item">
+                    <div class="list-item__inner">
+                        <img class="list-item__folder" src="img/folder.png" alt="folder">
+                        <span>${data.name}</span>
+                    </div>
+                </div>
+            `;
         }
 
         this.toggleItems = function (parent) {

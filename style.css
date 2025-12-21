@@ -31,4 +31,8 @@
   transform: rotate(180deg);
 }
 
+.child__item {
+  padding-left: 1.5em;
+}
+
 /*# sourceMappingURL=style.css.map */

@@ -66,10 +66,7 @@ export const TicTacToe = {
         if (this.checkForWin()) {
           // изменение статуса игры
           this.setGameEndStatus()
-        }
-
-        // проверка на наличие пустых блоков
-        if (!this.checkHasEmptyBlocks()) {
+        } else if (!this.checkHasEmptyBlocks()) {
           // изменение статуса игры
           this.setGameEndStatus()
 
@@ -102,6 +99,14 @@ export const TicTacToe = {
    * @returns {boolean} - true если есть пустые блоки, false - если нет
    */
   checkHasEmptyBlocks() {
+    for (let i = 0; i < 3; i++) {
+        for (let j = 0; j < 3; j++) {
+            if (this.matrix[i][j] === null) {
+                return true
+            }
+        }
+    }
+    return false
   },
 
   /**
@@ -116,6 +121,18 @@ export const TicTacToe = {
    * Сброс данных и очищение дом дерева
    */
   restartGame() {
+    this.isGameEnd = false
+
+    this.matrix = [
+        [null, null, null],
+        [null, null, null],
+        [null, null, null],
+    ]
+
+    this.boxes.forEach(box => {
+        this.setBlockDom(box, true)
+        this.setBlockValue(box, true)
+    })
   },
   
   /**
@@ -148,6 +165,11 @@ export const TicTacToe = {
    * @param {boolean?} clear - если true - отчистить ячейку в матрице
    */
   setBlockValue(target, clear) {
+    const [row, col] = this.getBlockPosition(target)
+
+    this.matrix[row - 1][col - 1] = clear
+      ? null
+      : this.getCurrentTurnValue()
   },
 
   /**
@@ -158,6 +180,7 @@ export const TicTacToe = {
    * @param {boolean?} clear - если true - отчистить target
    */
   setBlockDom(target, clear) {
+    target.textContent = clear ? "" : this.getCurrentTurnValue()
   },
 
   /**
@@ -165,12 +188,14 @@ export const TicTacToe = {
    * @returns {string} Текущий ход 'X' или 'O'
    */
   getCurrentTurnValue() {
+    return this.isXTurn ? "X" : "O"
   },
 
   /**
    * Изменение текущего хода в данных
    */
   changeTurnValue() {
+    this.isXTurn = !this.isXTurn
   },
 
   /**
@@ -197,5 +222,6 @@ export const TicTacToe = {
    * Установить статус об окончании игры
    */
   setGameEndStatus() {
+    this.isGameEnd = true
   }
 }

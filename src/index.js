@@ -647,11 +647,12 @@ const game = {
 
     const lastDirection = this.snake.getLastStepDirection()
 
-    if (direction === "up" && lastDirection === "down") return false
-    if (direction === 'down' && lastDirection ==='up') return false
-    if (direction === 'left' && lastDirection === 'right') return false
-    if (direction === ' right' && lastDirection === 'left') return false
-    return true
+    return !(
+      (direction === "up" && lastDirection === "down") ||
+      (direction === "down" && lastDirection === "up") ||
+      (direction === "left" && lastDirection === "right") ||
+      (direction === "right" && lastDirection === "left")
+    );
   },
 
   /**

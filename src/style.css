@@ -1,0 +1,136 @@
+body {
+    background-color: #e4e2e2;
+    font-size: 20px;
+}
+
+.all {
+    background-color: white;
+    border-radius: 50px;
+    width: 1300px;
+    height: 700px;
+    margin: auto;
+    margin-top: 40px;
+    padding: 70px;
+    display: flex;
+    gap: 50px;
+}
+
+.pizzas {
+    display: flex;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.pizza-card, .pizza--card-active {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    padding: 10px;
+    text-align: center;
+}
+
+.pizza--card-active {
+    box-shadow: inset 0 0 0 2px #e86100;
+    border-radius: 30px;
+}
+
+.pizza-card img, .pizza--card-active img {
+    width: 210px;
+    height: 210px;
+    cursor: pointer;
+}
+
+.pizza-name {
+    font-weight: bold;
+}
+
+.params {
+    margin-top: -50px;
+}
+
+.params-title {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.params-size {
+    background-color: #f3f3f7;
+    border-radius: 50px;
+    display: flex;
+    padding: 5px;
+}
+
+.pizza-size, .pizza--size-active {
+    width: 225px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.pizza--size-active {
+    border-radius: 50px;
+    background-color: white;
+    box-shadow: 10px 7px 20px 0px rgb(94 94 94 / 28%);
+}
+
+.params-subtitle {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.toppings {
+    display: flex;
+    gap: 25px;
+}
+
+.topping-card, .topping--card-active {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 115px;
+    gap: 15px;
+    text-align: center;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: -7px 7px 20px 0px rgb(94 94 94 / 28%);
+}
+
+.topping-card img, .topping--card-active img {
+    width: 110px;
+    height: 110px;
+    cursor: pointer;
+}
+
+.topping--card-active {
+    box-shadow: inset 0 0 0 2px #e86100;
+    border-radius: 20px;
+}
+
+.topping-name {
+    margin: 0;
+    min-height: 48px;
+    font-size: 17px;
+    line-height: 24px;
+}
+
+.topping-сost {
+    margin: 0;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.button {
+    background-color: #e86100;
+    border-radius: 50px;
+    border: none;
+    padding: 20px;
+    margin-top: 230px;
+    width: 100%;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #c75402;
+}

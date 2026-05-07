@@ -65,22 +65,126 @@ class Pizza {
 
 // примеры:
 
-let pizza1 = new Pizza("Маргарита", "Маленькая");
-pizza1.addTopping("Сырный борт");
-pizza1.addTopping("Чедер и пармезан");
+//let pizza1 = new Pizza("Маргарита", "Маленькая");
+//pizza1.addTopping("Сырный борт");
+//pizza1.addTopping("Чедер и пармезан");
 
-console.log(pizza1.getType());
-console.log(pizza1.getSize());
-console.log(pizza1.getToppings().join(", "));
-console.log(pizza1.calculatePrice() + " руб");
-console.log(pizza1.calculateCalories() + " ккал");
+//console.log(pizza1.getType());
+//console.log(pizza1.getSize());
+//console.log(pizza1.getToppings().join(", "));
+//console.log(pizza1.calculatePrice() + " руб");
+//console.log(pizza1.calculateCalories() + " ккал");
 
-let pizza2 = new Pizza("Пепперони", "Большая");
-pizza2.addTopping("Сливочная моцарелла");
-pizza2.addTopping("Сырный борт");
+//let pizza2 = new Pizza("Пепперони", "Большая");
+//pizza2.addTopping("Сливочная моцарелла");
+//pizza2.addTopping("Сырный борт");
 
-console.log(pizza2.getType());
-console.log(pizza2.getSize());
-console.log(pizza2.getToppings().join(", "));
-console.log(pizza2.calculatePrice() + " руб");
-console.log(pizza2.calculateCalories() + " ккал");
+//console.log(pizza2.getType());
+//console.log(pizza2.getSize());
+//console.log(pizza2.getToppings().join(", "));
+//console.log(pizza2.calculatePrice() + " руб");
+//console.log(pizza2.calculateCalories() + " ккал");
+
+document.addEventListener("DOMContentLoaded", () => {
+  let selectedPizza = "Пепперони";
+  let selectedSize = "Маленькая";
+  let selectedToppings = [];
+
+  const button = document.querySelector(".button");
+
+  function updateButton() {
+    if (!selectedPizza) return;
+
+    const pizza = new Pizza(selectedPizza, selectedSize);
+
+    selectedToppings.forEach(topping => {
+      pizza.addTopping(topping);
+    });
+
+    button.textContent = `Добавить в корзину за ${pizza.calculatePrice()}₽ (${pizza.calculateCalories()} ккал)`;
+  }
+
+  const defaultSize = document.querySelector(".pizza-size");
+  if (defaultSize) {
+    defaultSize.classList.add("pizza--size-active");
+  }
+
+  const defaultPizza = [...document.querySelectorAll(".pizza-card")].find(card => 
+    card.querySelector(".pizza-name").textContent === "Пепперони"
+  );
+  if (defaultPizza) {
+    defaultPizza.classList.add("pizza--card-active");
+  }
+
+  function updateToppingPrices() {
+    document.querySelectorAll(".topping-card").forEach(topping => {
+      const toppingName = topping.querySelector(".topping-name").textContent.trim();
+      const priceElement = topping.querySelector(".topping-сost");
+      
+      const toppingPrices = {
+        "Сливочная моцарелла": 50,
+        "Сырный борт": (selectedSize === 'Маленькая' ? 150 : 300),
+        "Чедер и пармезан": (selectedSize === 'Маленькая' ? 150 : 300)
+      };
+
+      if (priceElement && toppingPrices[toppingName] !== undefined) {
+        priceElement.textContent = `${toppingPrices[toppingName]}₽`;
+      }
+    });
+  }
+
+  document.querySelectorAll(".pizza-card").forEach(card => {
+
+    card.addEventListener("click", () => {
+
+      document.querySelectorAll(".pizza-card").forEach(card => {
+        card.classList.remove("pizza--card-active");
+      });
+
+      card.classList.add("pizza--card-active");
+
+      selectedPizza = card.querySelector(".pizza-name").textContent;
+
+      updateButton();
+    });
+  });
+
+  document.querySelectorAll(".pizza-size").forEach(size => {
+
+    size.addEventListener("click", () => {
+
+      document.querySelectorAll(".pizza-size").forEach(size => {
+        size.classList.remove("pizza--size-active");
+      });
+
+      size.classList.add("pizza--size-active");
+
+      selectedSize = size.textContent;
+
+      updateToppingPrices();
+      updateButton();
+    });
+  });
+
+  document.querySelectorAll(".topping-card").forEach(topping => {
+
+    topping.addEventListener("click", () => {
+
+      const toppingName = topping.querySelector(".topping-name").textContent.trim();
+
+      if (selectedToppings.includes(toppingName)) {
+        selectedToppings = selectedToppings.filter(t => t !== toppingName);
+        topping.classList.remove("topping--card-active");
+        
+      } else {
+        selectedToppings.push(toppingName);
+        topping.classList.add("topping--card-active");
+      }
+
+      updateButton();
+    });
+  });
+
+  updateToppingPrices();
+  updateButton();
+});

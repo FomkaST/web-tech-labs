@@ -5,9 +5,53 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Document</title>
+    <link href="style.css" rel="stylesheet">
 </head>
 <body>
-    Кокшаров ЛБ-12
+    <div class="all">
+        <div class="pizzas">
+            <div class="pizza-card">
+                <img src="img/pepperoni.webp" alt="Пепперони">
+                <p class="pizza-name">Пепперони</p>
+            </div>
+            <div class="pizza-card">
+                <img src="img/margarita.webp" alt="Маргарита">
+                <p class="pizza-name">Маргарита</p>
+            </div>
+            <div class="pizza-card">
+                <img src="img/bavarian.webp" alt="Баварская">
+                <p class="pizza-name">Баварская</p>
+            </div>
+        </div>
+        <div class="params">
+            <p class="params-title">Выберите размер</p>
+            <div class="params-size">
+                <div class="pizza-size">Маленькая</div>
+                <div class="pizza-size">Большая</div>
+            </div>
+
+            <p class="params-subtitle">Добавить по вкусу</p>
+            <div class="toppings">
+                <div class="topping-card">
+                    <img src="img/cheese.webp" alt="Сырный борт">
+                    <p class="topping-name">Сырный борт</p>
+                    <p class="topping-сost">150₽</p>
+                </div>
+                <div class="topping-card">
+                    <img src="img/mocarella.webp" alt="Сливочная моцарелла">
+                    <p class="topping-name">Сливочная моцарелла</p>
+                    <p class="topping-сost">50₽</p>
+                </div>
+                <div class="topping-card">
+                    <img src="img/chedder.webp" alt="Чедер и пармезан">
+                    <p class="topping-name">Чедер и пармезан</p>
+                    <p class="topping-сost">150₽</p>
+                </div>
+            </div>
+
+            <button class="button">Добавить в корзину</button>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
